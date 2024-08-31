@@ -1,0 +1,4 @@
+run react server: npm start
+run node js server: npm run server
+
+run both: npm start

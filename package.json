@@ -1,0 +1,9 @@
+{
+  "dependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "scripts": {
+  "start": "concurrently \"npm run server --prefix server\" \"npm start --prefix client\" \"npm run flask\"",
+  "flask": "cd python && python3 python_scripts.py"
+}
+}

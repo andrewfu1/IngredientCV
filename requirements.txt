@@ -1,0 +1,17 @@
+# Core libraries
+numpy==1.23.1
+pandas==1.5.3
+matplotlib==3.7.1
+opencv-python==4.8.0.74
+
+# CV
+torch==2.0.0
+ultralytics==8.2.71
+fiftyone==0.20.1
+
+# API and HTTP
+requests==2.31.0
+openai==1.40.2
+
+# Other
+python-dotenv==1.0.0

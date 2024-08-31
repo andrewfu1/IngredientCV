@@ -1,0 +1,26 @@
+path: C:\Users\andre\.vscode\IngredientCV\dataset(19class)
+train: train\images\val
+val: val\images\val
+
+nc: 19
+
+names:
+  0: Apple
+  1: Artichoke
+  2: Banana
+  3: Broccoli
+  4: Cabbage
+  5: Cantaloupe
+  6: Carrot
+  7: Cucumber
+  8: Grape
+  9: Mango
+  10: Lemon
+  11: Mushroom
+  12: Pear
+  13: Pineapple
+  14: Pumpkin
+  15: Strawberry
+  16: Tomato
+  17: Watermelon
+  18: Orange
