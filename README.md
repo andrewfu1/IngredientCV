@@ -4,8 +4,6 @@ Combines real-time object detection using YOLOv8 with a meal suggestion and reci
 
 Object detection model is trained at 500 images per class with 10% total background images.
 
-
-Project Structure
 ```bash
 IngredientCV/
 │
