@@ -2,7 +2,7 @@
 
 Combines real-time object detection using YOLOv8 with a meal suggestion and recipe generation system.
 
-Object detection model is trained at 500 images per class with 10% total background images.
+Object detection model is trained at 500 images per class.
 
 ```bash
 IngredientCV/
