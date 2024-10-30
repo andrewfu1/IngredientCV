@@ -1,4 +1,4 @@
-## Real-Time Food Object Detection and Recipe Generator
+## Ingredient Object Detection and Recipe Generator
 
 ```bash
 IngredientCV/
@@ -30,8 +30,8 @@ IngredientCV/
 │   │   ├── config.yaml     # Model config
 │   │   ├── train.py        # Training script
 │   │   └── yolov8n.pt      # YOLOv8 model weights
-│   ├── download_data.py    # Custom script to download, merge, and export datasets
-│   └── python_scripts.py   # Python utility scripts
+│   ├── download_data.py    # Script for making training dataset
+│   └── python_scripts.py   # Python functionalities
 │
 ├── server/
 │   ├── package-lock.json   
