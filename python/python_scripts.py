@@ -103,7 +103,7 @@ def generate_recipe():
     return jsonify({"recipe": formatted_recipe}), 200
 
 # Change model path depending on route
-model_path = "/Users/andrewfu/Documents/vscode/IngredientCV/python/model_train/runs/detect/train(19)/weights/best.pt"
+model_path = "/Users/andrewfu/Code/vscode/IngredientCV/python/model_train/runs/detect/train(19)/weights/best.pt"
 model = YOLO(model_path)
 CONFIDENCE_THRESHOLD = 0.7
 found_objects = []
