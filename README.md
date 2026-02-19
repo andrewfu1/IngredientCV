@@ -1,46 +1,37 @@
-## Ingredient Object Detection and Recipe Generator
+# IngredientCV
 
+Detects food ingredients from a live webcam feed using a custom-trained YOLOv8 model, then suggests meals and generates recipes via the OpenAI API.
+
+## Setup
+
+**Python (Flask server)**
 ```bash
-IngredientCV/
-│
-├── client/
-│   ├── public/             
-│   └── src/                
-│       ├── App.css         
-│       ├── App.js          # Main React component
-│       ├── App.test.js     
-│       ├── ItemList.js     # Component to display detected items
-│       ├── VideoFeed.js    # Component for live Video feed
-│       ├── addItem.js      # Component to add new items
-│       ├── generate.js     # Component to generate meal suggestions
-│       ├── index.css       
-│       ├── index.js        
-│       ├── logo.svg        
-│       ├── reportWebVitals.js 
-│       ├── setupTests.js   
-│       ├── .gitignore      
-│       ├── README.md      
-│       ├── package-lock.json 
-│       └── package.json    
-│
-├── python/
-│   ├── model_train/
-│   │   ├── runs/
-│   │   │   └── detect/     # Training runs and results
-│   │   ├── config.yaml     # Model config
-│   │   ├── train.py        # Training script
-│   │   └── yolov8n.pt      # YOLOv8 model weights
-│   ├── download_data.py    # Script for making training dataset
-│   └── python_scripts.py   # Python functionalities
-│
-├── server/
-│   ├── package-lock.json   
-│   ├── package.json        
-│   ├── server.js           # Node.js proxy server
-│   └── .gitignore          
-│
-├── README.md               
-├── commands.txt            
-├── package-lock.json       
-├── package.json            
-└── requirements.txt        # Python dependencies
+pip install -r requirements.txt
+python python/python_scripts.py
+```
+
+**Node + React**
+```bash
+npm install
+npm start   # starts both React and the Node proxy
+```
+
+Set your OpenAI API key in a `.env` file:
+```
+SECRET_API_KEY=sk-...
+```
+
+## How it works
+
+1. Flask streams webcam frames through YOLOv8, detecting ingredients in real time
+2. Detected items populate a list in the UI (you can also add items manually)
+3. Click **Generate Meals** to get 3 meal suggestions from GPT-4o-mini
+4. Click a meal to get a full step-by-step recipe
+
+## Project Structure
+
+```
+client/       React frontend
+server/       Node.js proxy (port 5001 → Flask at 5002)
+python/       Flask API + YOLOv8 inference + model training scripts
+```
